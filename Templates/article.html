@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FLASK</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ url_for('static', filename='fontawesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='clean-blog.min.css')}}" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="{{url_for('index')}}">A PYTHON-FLASK Application</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('index')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('about')}}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('articles')}}">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('comment')}}">Comment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('add')}}">Add an Article</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('static/Gavel.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h2>{{article.title}}</h2><br/>
+              <span class="meta">
+                <a href="https://www.linkedin.com/in/alexandralee99/"> {{article.author}}</a><br/>
+                <p>Ecrit le 13 juillet 2016</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p>Il y a beaucoup d'intérêt dans la nouvelle technologie appelée « blockchain » et les gens ont
+                commencés à imaginer ses utilisations au-delà des applications financières. Dans les médias, de
+                nombreux articles ont soulignés que cela aura un impact profond dans le domaine juridique et sera
+                "disruptive" de la pratique actuelle du droit. Ainsi, les juristes devront avoir un regard innovant sur
+                la façon dont cette technologie pourrait améliorer leurs services afin de ne pas être désavantagés
+                quand d'autres utilisent cette nouvelle technologie puissante.</p>
+
+            <p>Le présent article examine certaines caractéristiques de la technologie blockchain, que
+                ces professionnels devront adopter pour améliorer leurs services et relations avec leurs clients,
+                plutôt que d’être dépassés par cette technologie. On abordera les notions de décentralisation et
+                d’absence de confiance qui sont caractéristiques du blockchain originale. L'adoption des blockchain
+                dans le domaine juridique ne doit pas être un bouleversement indésirable, mais plutôt une occasion
+                de renforcer les relations juridiques, où et quand ils peuvent se poser.</p>
+
+            <p>Parmi les caractéristiques de la blockchain originale, qui sous-tend la crypto-monnaie
+                Bitcoin, les plus importantes sont qu'ils sont un système décentralisé, ouvert au public, sans aucune
+                autorité de singulière qui le régit, et qu’il est un système « peer-to-peer » qui est géré par certains
+                individus, appelés « mineurs ». (Ils vérifient que les transactions sont cohérentes à travers le
+                réseau.) Il est également considéré comme un système sans confiance parce que l'échange de la
+                monnaie est émis sans institution traditionnel de confiance, telles que les banques, ou sans
+                identification complète des utilisateurs du système.</p>
+
+            <h2 class="section-heading">Modifications pour le système juridique</h2>
+            <p>Pour que la blockchain puisse s’appliquer dans
+                le domaine juridique, il est important que ces deux caractéristiques fondamentales soient modifiées
+                de façon à ce qu’elles conviennent mieux à l'écosystème juridique. Ces modifications peuvent
+                complètement renverser ces caractéristiques d’un système décentralisé à un système centralisé, et
+                mettre en place un contrôle par des prestataires de service de confiance. Eventuellement, la
+                blockchain publique peut être programmée de telle manière à être privée.</p>
+
+            <p>Tout d'abord, il est précisément le modèle d'un système décentralisé qui provoque
+                l'inquiétude des professionnels du droit. Il représente la menace que dans un système «peer-topeer»,
+                le rôle des intermédiaires, tels que les avocats, juristes et notaires, deviennent obsolètes.
+                Nous pouvons déjà observer que la technologie peut remplacer la fonction de quelques notaires de
+                la République d'Estonie. Etant l'une des cinq nations numériques (D5) engagées dans le
+                développement de l'économie numérique, l’Estonie a lancé un site Web en utilisant la technologie
+                blockchain, en remplacement d'un notaire public1 pour les e-résidents. </p>
+
+            <p>Si ce modèle est un succès,
+nous pouvons imaginer qu'il soit appliqué en France. Il aurait un impact sur tous les domaines du
+droit dans lesquels les notaires sont autorisés à intervenir pour leurs clients: famille, immobilier,
+fiscalité et patrimoine, entreprises, rural et Collectivité locales. Par conséquent, les notaires doivent
+étudier les évolutions nécessaires de leur métier pour maintenir leurs rôles auprès de leurs clients
+avec l’arrivée de cette nouvelle technologie. Peut-être que les obligations actuelles pour pratiquer
+dans les limites géographiques devront changer en raison d'un nouveau rôle au sein d'Internet où la
+présence physique n’est pas nécessaire.</p>
+
+            <p>D’autres prédictions de l’usage de la blockchain mentionnent les achats d’immobilier, ou les
+                contrats privés (« smart-contracts »). Dans un modèle décentralisé, ces accords pourraient être
+                effectués sans l'aide d’un avocat ou d’un professionnel du droit, bien que ces deux exemples restent
+                théoriques pour l'instant. De cette façon, la blockchain décentralisé est considéré comme un outil
+                collaboratif, permettant aux collectivités ou aux particuliers de contracter sans l’intervention d’un
+                médiateur traditionnel pour fournir une légitimité formelle. Si les professionnels du droit souhaitent
+                préserver leurs relations avec leurs clients, en ce qui concerne ces types de transactions, ils doivent
+                trouver un moyen d’utiliser les avantages des blockchain : automatisation, base de donnée très
+                sécurisé et immuable, transactions effectuées en temps réel. En plus de leurs valeurs propres de
+                professionnels formés et expérimentés, ils doivent être en mesure d'intégrer les avantages des
+                blockchain, pour ce placer au centre du système au service de leurs clients. </p>
+
+            <p>Dans un article récent,
+                «Règlement de la blockchain: Il est urgent d'attendre» Isabelle Renard décrit plusieurs déclinaisons
+                de la blockchain originale qui sont plus privée (voire centralisée) dans lesquelles « il sera possible
+                d'imposer aux acteurs des obligations juridiques au travers des conditions générales d'utilisation de
+                l' 'application ».2 Ainsi, en créant des blockchain privées, les professionnels du droit pourraient
+                retenir leurs relations juridiques. Ils pourraient définir les paramètres d'accès et de contrôle.
+                N’oublions pas que cela n’est pas du tout les principes originaux de la blockchain. </p>
+
+            <h2 class="section-heading">BESOIN DE BONS CODEURS</h2>
+
+            <p>Cette évolution technologique présente une opportunité aux professionnels du droit de se
+                constituer en autorité centrale régissant les relations qu'ils enregistrent, en utilisant cette nouvelle
+                technologie. Ainsi, ils doivent modifier les protocoles des blockchain, afin que leurs clients leurs
+                fassent confiance en qualité de fournisseurs de cette technologie.</p>
+
+            <p>La législation récente de l'Union
+                européenne, le cadre réglementaire e-IDAS, no. 910/2014, soutient davantage le scénario des
+                transactions électroniques juridiques et la nécessité de transférer la confiance dans les écosystèmes
+                électroniques. De l'excitation et de la consternation que cette nouvelle technologie apporte, avec ces
+                avantages et ces risques, une chose est sûre, les avocats ont besoin de bons codeurs.</p>
+            <br/>
+            <p><span class="caption text-muted" text-align="left" !iimportant>References: 
+            <br/>
+            1) Bitnation: Gouvernance 2.0, <a href="https://bitnation.co/notary/">https://bitnation.co/notary/</a> [accédé 12	juillet	16].<br/>
+            2) Renard, Isabelle, “Régulation de	la blockchain: Il est urgent d’attendre”, Expertises des systèmes d’informatiques, no.	414, juin 2016,	p 215-218.</p>
+            </span></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            
+            <p class="copyright text-muted">Made by Alexandra Lee, 2018, Coding-Academy by Epitech</p>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='jquery.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ url_for('static', filename='js/clean-blog.min.js')}}"></script>
+
+  </body>
+
+</html>
